@@ -22,9 +22,9 @@ dbConnectionUpload <- function(user = "anja", psw = "fotofalle", host = "FVAFR-P
   }
 
   tryCatch(
-  con <-  con <- dbConnect("PostgreSQL"
+  con <- dbConnect("PostgreSQL"
                            , user = user
-                           , password = pw
+                           , password = psw
                            , host = host
                            , port = port
                            , dbname = db
