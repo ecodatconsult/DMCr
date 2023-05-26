@@ -7,7 +7,7 @@
 #'
 #' @examples
 #'
-dbConnection <- function(type){
+dbConnection <- function(type, user = "anja", pw = "fotofalle", host = "FVAFR-PC52098v", port = 5432, db = "fotofallen"){
 
   require(RPostgreSQL)
   require(DBI)
@@ -20,11 +20,11 @@ dbConnection <- function(type){
   }
 
   con <- dbConnect("PostgreSQL"
-                   , user = "anja"
-                   , password = psw
-                   , host = "FVAFR-PC52098v"
-                   , port = 5432
-                   , dbname = "fotofallen"
+                   , user = user
+                   , password = pw
+                   , host = host
+                   , port = port
+                   , dbname = db
   )
 
   if(exists("con")){
