@@ -17,13 +17,6 @@ dbConnection <- function(type, user = "anja", pw = "fotofalle", host = "FVAFR-PC
   require(RPostgreSQL)
   require(DBI)
 
-  if(type == "read"){
-    psw = "fotofalle"
-  }
-  if(type == "write"){
-    psw = "fotofalle"
-  }
-
   con <- dbConnect("PostgreSQL"
                    , user = user
                    , password = pw
