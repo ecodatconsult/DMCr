@@ -12,6 +12,3 @@ recordedplot (als Liste)
 \description{
 Plottet eine Karte von Baden-Württemberg mit den ausgwählten Standorten von Fotofallenkameras.
 }
-\examples{
-
-}

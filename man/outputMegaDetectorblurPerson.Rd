@@ -9,12 +9,6 @@ outputMegaDetectorblurPerson(file_path)
 \arguments{
 \item{file_path}{Pfad zur Session}
 }
-\value{
-
-}
 \description{
 Fotos mit "Personen" (Klassifikation vom MegaDetector) drauf werden verpixelt + Thumbnail aktualisiert
-}
-\examples{
-
 }

@@ -9,12 +9,6 @@ outputMegaDetectorSeparate(file_path)
 \arguments{
 \item{file_path}{}
 }
-\value{
-
-}
 \description{
 Durch den MegaDetector klassifizierte Fotos werden nach Kategorie der Detectino in separate Ordner kopiert.
-}
-\examples{
-
 }

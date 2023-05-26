@@ -1,17 +1,12 @@
 #' Eine Probe-Verbindung zur FVA-Fotofallendatenbank mit Schreibrechten, um das Passwort zu überprüfen.
 #'
-#' @param user character, legt den Benutzernamen auf der Datenbank fest, über den die Verbindung hergestellt werden soll
-#' @param psw character, legt das Passwort des Benutzernamens auf der Datenbank fest, über den die Verbindung hergestellt werden soll
-#' @param host character, Bezeichung der Adresse unter der die Datenbank erreichbar ist
-#' @param port numeric, Port über dne die Datenbank erreichbar ist
-#' @param db character, Name der Datenbank
 #'
 #' @return Formal class PostgreSQLConnection
 #' @export
 #'
 #' @examples
 #'
-dbConnectionUpload <- function(user = "anja", psw = "fotofalle", host = "FVAFR-PC52098v", port = 5432, db = "fotofallen"){
+dbConnectionUpload <- function(){
 
   require(RPostgreSQL)
   require(DBI)
@@ -22,20 +17,21 @@ dbConnectionUpload <- function(user = "anja", psw = "fotofalle", host = "FVAFR-P
   }
 
   tryCatch(
-  con <- dbConnect("PostgreSQL"
-                           , user = user
-                           , password = psw
-                           , host = host
-                           , port = port
-                           , dbname = db
-  )
+    con <- with(read.csv(system.file("db_login.csv", package = "DMCr")), {
+      dbConnect("PostgreSQL"
+                , user = user
+                , password = pw
+                , host = host
+                , port = port
+                , dbname = db)
+    })
   , error=function(e) {})
 
   if(exists("con")){
     con_list1 <- dbListTables(con)
     assign("con_list",con_list1, envir = .GlobalEnv)
     dbDisconnect(con)
-    rm(con, con_list1, psw)
+    rm(con, con_list1)
   }else{
     con_list1 <- "No"
     assign("con_list",con_list1, envir = .GlobalEnv)

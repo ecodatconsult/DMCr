@@ -17,6 +17,3 @@ JSON-Datei (wenn run = "batch) oder ein Foto als JPG mit bounding box (wenn run 
 \description{
 Ausführung des MegaDetectors
 }
-\examples{
-
-}

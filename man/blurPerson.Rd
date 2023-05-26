@@ -29,6 +29,3 @@ Die Fotos werden am Speicherort überschrieben.
 \description{
 Augewählte Fotos werden verpixelt und ggf. verkleinert
 }
-\examples{
-
-}

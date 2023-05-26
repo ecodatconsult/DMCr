@@ -6,15 +6,9 @@
 \usage{
 dbConnection(type)
 }
-\arguments{
-\item{type}{Bestimmt welche Art Verbindung hergestellt werden soll, ob nur Lese- oder auch Schreibrechte: type = c("read","write").}
-}
 \value{
 Formal class PostgreSQLConnection
 }
 \description{
 Baut eine Verbindung zur FVA-Fotofallendatenbank auf (PostgreSQL).
-}
-\examples{
-
 }

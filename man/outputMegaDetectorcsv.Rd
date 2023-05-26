@@ -9,12 +9,6 @@ outputMegaDetectorcsv(file_path)
 \arguments{
 \item{file_path}{Pfad zur Session}
 }
-\value{
-
-}
 \description{
 Umwandlung der MegaDetector-Datei (JSON) in eine csv-Tabelle
-}
-\examples{
-
 }

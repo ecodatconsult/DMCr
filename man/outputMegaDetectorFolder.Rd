@@ -9,12 +9,6 @@ outputMegaDetectorFolder(file_path)
 \arguments{
 \item{file_path}{Dateipfad zum Foto (.jpg)}
 }
-\value{
-
-}
 \description{
 Fotos mit Detection des MegaDetectors werden in einen separaten Ordner verschoben
-}
-\examples{
-
 }

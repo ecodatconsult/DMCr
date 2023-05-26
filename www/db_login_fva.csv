@@ -1,0 +1,5 @@
+user, "anja"
+pw, "fotofalle"
+host, "FVAFR-PC52098v"
+port, 5432
+db, "fotofallen"

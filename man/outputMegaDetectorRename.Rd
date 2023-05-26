@@ -9,12 +9,6 @@ outputMegaDetectorRename(file_path)
 \arguments{
 \item{file_path}{Pfad zur Datei "Megadetector_output.json"}
 }
-\value{
-
-}
 \description{
 Bereits existierende MegaDetector-Datei wird umbenannt, damit sie nicht überschrieben wird
-}
-\examples{
-
 }

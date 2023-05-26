@@ -17,6 +17,3 @@ data.table/data.frame
 \description{
 Lädt alle Tabellen einer Session und vereinigt sie zu einer großen Tabelle. Die Tabellen entstammen der Klassifikation mit dem Programm FFM2 und liegen im csv-Format vor.
 }
-\examples{
-
-}

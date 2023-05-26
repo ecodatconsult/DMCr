@@ -4,17 +4,11 @@
 \alias{dbConnectionUpload}
 \title{Eine Probe-Verbindung zur FVA-Fotofallendatenbank mit Schreibrechten, um das Passwort zu überprüfen.}
 \usage{
-dbConnectionUpload(psw)
-}
-\arguments{
-\item{psw}{Passwort für den Zugriff auf die FVA-Fotofallendatenbank mit Schreibrechten.}
+dbConnectionUpload()
 }
 \value{
 Formal class PostgreSQLConnection
 }
 \description{
 Eine Probe-Verbindung zur FVA-Fotofallendatenbank mit Schreibrechten, um das Passwort zu überprüfen.
-}
-\examples{
-
 }

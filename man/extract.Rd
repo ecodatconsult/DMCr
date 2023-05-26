@@ -19,6 +19,3 @@ data.frame
 \description{
 Ruft Daten von der FVA-Fotofallendatenbank ab.
 }
-\examples{
-
-}

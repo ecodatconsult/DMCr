@@ -12,6 +12,3 @@ conda env
 \description{
 Erstellung einer Conda-Umgebung für den MegaDetector
 }
-\examples{
-
-}
