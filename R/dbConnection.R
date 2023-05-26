@@ -1,5 +1,10 @@
 #' Baut eine Verbindung zur FVA-Fotofallendatenbank auf (PostgreSQL).
 #'
+#' @param user character, legt den Benutzernamen auf der Datenbank fest, über den die Verbindung hergestellt werden soll
+#' @param pw character, legt das Passwort des Benutzernamens auf der Datenbank fest, über den die Verbindung hergestellt werden soll
+#' @param host character, Bezeichung der Adresse unter der die Datenbank erreichbar ist
+#' @param port numeric, Port über dne die Datenbank erreichbar ist
+#' @param db character, Name der Datenbank
 #' @param type Bestimmt welche Art Verbindung hergestellt werden soll, ob nur Lese- oder auch Schreibrechte: type = c("read","write").
 #'
 #' @return Formal class PostgreSQLConnection
