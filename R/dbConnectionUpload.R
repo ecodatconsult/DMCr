@@ -1,13 +1,17 @@
 #' Eine Probe-Verbindung zur FVA-Fotofallendatenbank mit Schreibrechten, um das Passwort zu überprüfen.
 #'
-#' @param psw Passwort für den Zugriff auf die FVA-Fotofallendatenbank mit Schreibrechten.
+#' @param user character, legt den Benutzernamen auf der Datenbank fest, über den die Verbindung hergestellt werden soll
+#' @param psw character, legt das Passwort des Benutzernamens auf der Datenbank fest, über den die Verbindung hergestellt werden soll
+#' @param host character, Bezeichung der Adresse unter der die Datenbank erreichbar ist
+#' @param port numeric, Port über dne die Datenbank erreichbar ist
+#' @param db character, Name der Datenbank
 #'
 #' @return Formal class PostgreSQLConnection
 #' @export
 #'
 #' @examples
 #'
-dbConnectionUpload <- function(psw){
+dbConnectionUpload <- function(user = "anja", psw = "fotofalle", host = "FVAFR-PC52098v", port = 5432, db = "fotofallen"){
 
   require(RPostgreSQL)
   require(DBI)
@@ -18,12 +22,12 @@ dbConnectionUpload <- function(psw){
   }
 
   tryCatch(
-  con <- dbConnect("PostgreSQL"
-                   , user = "anja"
-                   , password = psw
-                   , host = "FVAFR-PC52098v"
-                   , port = 5432
-                   , dbname = "fotofallen"
+  con <-  con <- dbConnect("PostgreSQL"
+                           , user = user
+                           , password = pw
+                           , host = host
+                           , port = port
+                           , dbname = db
   )
   , error=function(e) {})
 
