@@ -9,11 +9,8 @@
 #'
 dbConnection <- function(type){
 
-  require(RPostgreSQL)
-  require(DBI)
-
   con <- with(read.csv(system.file("db_login.csv", package = "DMCr")), {
-    dbConnect("PostgreSQL"
+    DBI::dbConnect(RPostgreSQL::PostgreSQL(),
                      , user = user
                      , password = pw
                      , host = host
@@ -21,10 +18,10 @@ dbConnection <- function(type){
                      , dbname = db)
   })
 
+  #return(con)
+
   if(exists("con")){
     assign("con",con, envir = .GlobalEnv)
-  }else{
-    #stop("Verbindung zur Datenbank konnte nicht hergesellt werden", call. = TRUE, domain = NULL)
   }
 
 }
