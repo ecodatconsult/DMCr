@@ -8,20 +8,14 @@
 #' @examples
 #'
 dbConnection <- function(type){
-
   con <- with(read.csv(system.file("db_login.csv", package = "DMCr")), {
     DBI::dbConnect(RPostgreSQL::PostgreSQL(),
-                     , user = user
-                     , password = pw
-                     , host = host
-                     , port = port
-                     , dbname = db)
+                   user = user,
+                   password = pw,
+                   host = host,
+                   port = port,
+                   dbname = db)
   })
 
-  #return(con)
-
-  if(exists("con")){
-    assign("con",con, envir = .GlobalEnv)
-  }
-
+  return(con)
 }

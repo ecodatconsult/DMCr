@@ -4,6 +4,7 @@ check <- function(data){
     data = c("daten","ereignis")
   }
 
+  # TODO remove loop
   for(i in 1:length(data)){
 
     if(data[i] == "ereignis"){

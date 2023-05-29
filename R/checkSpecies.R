@@ -8,6 +8,7 @@ checkSpecies <- function(){
   }
 
   #load species
+  # TODO: unklare Herkunft von species-Tabelle (speciesDB_vector wird in speciesDB assigned)
   species <- species$new
 
   #names in ereignis_import

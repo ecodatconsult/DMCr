@@ -1,5 +1,5 @@
 checkSpeciesCorr <- function(){
-
+  # TODO: Funktion sollte unbedingte falsche tierarten als Input haben
   require(stringi)
 
   #data table
