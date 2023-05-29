@@ -1,5 +1,7 @@
 import <- function() {
 
+  # Hier ist unklar auf was sich die Funktion bezieht
+
   require(dplyr)
   require(data.table)
   require(stringr)
@@ -134,6 +136,12 @@ import <- function() {
                                        format = "%d.%m.%Y %H:%M:%S")
 
     #na -> 0
+
+    # TODO: simplify replacing NA with 0
+    # apply(table_import[,names(table_import)[str_detect(names(table_import), "^n_[0-9]")]],
+    #       1,
+    #       function(x) ifelse(is.na(x), 0, x))
+
     table_import[is.na(n_0w),n_0w := 0,][
       is.na(n_0m),n_0m := 0,][
         is.na(n_0u),n_0u := 0,][
