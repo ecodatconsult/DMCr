@@ -44,7 +44,7 @@ importTables <- function(file_path, data) {
         do.call(rbind,
                 c(lapply(filenames,
                          function(x) {
-                           d <- fread(x)
+                           d <- fread(x, encoding = "UTF-8")
                            # Anja: die drei Zeilen unten können raus.Dafür habe ich den Ordnerpfad und den Ordnernamen bei beiden Tabellen mit aufgenommen, da es immer wieder vorgekommen ist, dass diese nach dem Start com FFM2 aktualisiert worden sind.
                            # if (nchar(d$ORDNER[1]) == 20) {
                            #   d$ORDNER <- tail(unlist(str_split(x, pattern = "/")), 2)[1]

@@ -4,13 +4,24 @@ import <- function() {
   require(data.table)
   require(stringr)
 
+
+
+  #req_col_names <- c("s_foto_id","E_ID","ORDNER","BILDNAME","DATUM","ZEIT_UTC","E_ENDE","E_DAUER","E_ANZBLD","STO_ID","KMRA_ID","BEARBTNG","Tierart_1","Tierart_2","BESTBILD","ANZ_TA1_ges","ANZ_TA2_ges","ANZ_0W","ANZ_0M","ANZ_0U","ANZ_1W","ANZ_1M","ANZ_1U","ANZ_2W","ANZ_2M","ANZ_2U","ANZ_21M","ANZ_22M","ANZ_3M","ANZ_3W","ANZ_3U","E_ID_NEU","Anf_Bild","End_Bild","Fluchtreak","Bildquali","Anz_Mark_T","Individuum","Bemerk_1","Bemerk_2","AUSSGRßE","AUSRICHT","ACHSE","Sieht_Cam","SCHNEE")
+
   data = c("daten","ereignis")
+
+  names(ereignis)[stringr::str_detect(names(ereignis),"AUSSGR")] <- "AUSSGRßE"
+  names(daten)[stringr::str_detect(names(daten),"AUSSGR")] <- "AUSSGRßE"
 
   for(i in 1:length(data)){
 
     if(data[i] == "ereignis" && length(ereignis$s_foto_id) > 0){
 
       #correct column names
+      #req_col_names[!req_col_names %in% names(ereignis)]
+
+
+
       table_import <- ereignis[, .(
                                 "s_foto_id" = s_foto_id
                                 ,"s_ereignis_id" = E_ID
