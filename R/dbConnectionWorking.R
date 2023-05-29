@@ -1,6 +1,5 @@
 #' Eine Probe-Verbindung zur FVA-Fotofallendatenbank mit Schreibrechten, um das Passwort zu überprüfen.
 #'
-#'
 #' @return Formal class PostgreSQLConnection
 #' @export
 #'

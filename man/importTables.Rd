@@ -4,12 +4,12 @@
 \alias{importTables}
 \title{Lädt alle Tabellen einer Session und vereinigt sie zu einer großen Tabelle. Die Tabellen entstammen der Klassifikation mit dem Programm FFM2 und liegen im csv-Format vor.}
 \usage{
-importTables(file_path, data)
+importTables(file_path, data = c("daten", "ereignis"))
 }
 \arguments{
-\item{file_path}{Pfad zum Ordner der Session. Beispielsweise "N:/Projekte/Gruenbrueckenmonitor_1708/Daten/Feldarbeit/Fotofallenmonitoring/session_07".}
+\item{file_path}{character, Pfad zum Ordner der Session. Beispielsweise "N:/Projekte/Gruenbrueckenmonitor_1708/Daten/Feldarbeit/Fotofallenmonitoring/session_07".}
 
-\item{data}{Bestimmt welche Tabellen geladen werden sollen: data = c("daten","ereignis"). Default = "both" lädt sowohl die _daten als auch die _ereignis Tabellen.}
+\item{data}{character vector, bestimmt welche Tabellen geladen werden sollen: data = c("daten","ereignis").}
 }
 \value{
 data.table/data.frame
