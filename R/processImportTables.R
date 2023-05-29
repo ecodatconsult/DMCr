@@ -12,7 +12,7 @@ processImportTables <- function(daten_ereignis_list) {
 
     lapply(daten_ereignis_list, function(data){
 
-    names(data)[stringr::str_detect(names(ereignis),"AUSSGR")] <- "AUSSGRßE"
+    names(data)[stringr::str_detect(names(data),"AUSSGR")] <- "AUSSGRßE"
 
     table_import <- data[, .(
       "s_foto_id" = s_foto_id

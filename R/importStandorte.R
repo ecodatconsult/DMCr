@@ -11,8 +11,9 @@ importStandorte <- function(file_path, project){
   require(RPostgreSQL)
   require(rpostgis)
 
-  dbConnection(type = "read")
+  con <- dbConnection(type = "read")
 
+  # TODO: Use sf-package
   ## Database
     # data frame Projekte
     df_projects <- dbGetQuery(con,"SELECT * FROM fotofallen.projekte")
